@@ -1,0 +1,81 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="top">
+    <icon class="iconfont icon-jiangbei"></icon>
+    <icon class="iconfont icon-liebiao"></icon>
+  </view>
+  <view class="search">
+    <icon class="iconfont icon-sousuo"></icon>
+    <input class="searcheng" placeholder="搜索..." placeholder-style="color:#9da3b4;font-size:14px"></input>
+  </view>
+  <view class="ranking">
+    <text>{{ ranking }}</text>
+    <navigator class="viewall">{{ seeall }} ></navigator>
+  </view>
+  <view class="sort">
+    <swiper vertical="{{ vertical }}" circular="{{ circular }}" display-multiple-items="{{ length }}" class="sort-swp">
+      <block wx:for="{{ list }}" wx:key="*this">
+        <swiper-item class="swiperStyle">
+          <navigator url="">
+            <image class="sort-pick" src="{{ item.url }}"></image>
+            <text>{{ item.title }}</text>
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class="ranking">
+    <text>{{ authorrank }}</text>
+    <navigator class="viewall">{{ seeall }} ></navigator>
+  </view>
+  <view class="sort">
+    <swiper vertical="{{ vertical }}" circular="{{ circular }}" display-multiple-items="{{ length }}" class="sort-swp">
+      <block wx:for="{{ author }}" wx:key="*this">
+        <swiper-item class="swiperStyle">
+          <navigator url="">
+            <image class="sort-pick" src="{{ item.url }}"></image>
+            <text>{{ item.name }}</text>
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="ranking new">
+    <text>{{ newrealease }}</text>
+    <navigator class="viewall">{{ seeall }} ></navigator>
+  </view>
+  <view class="release">
+      <view class="release-item" wx:for="{{ book }}" wx:key="*this">
+        <navigator url="">
+          <image class="release-pick" src="{{ item.url }}"></image>
+        </navigator>
+        <view>{{ item.title }}</view>
+        <view class="nickname">{{ item.author }}</view>
+      </view>
+  </view>
+  <view class="popular">
+    <view class="popular-title">{{ popular }}</view>
+    <view class="popular-list">
+      <navigator class="chart">2018排行榜</navigator>
+      <navigator class="hot">职场热门</navigator>
+      <navigator class="hot urban">都市言情</navigator>
+      <navigator class="hafo">哈佛大学经济管理类</navigator>
+      <navigator class="hot ability">领导才能</navigator>
+    </view>
+  </view>
+  <view class="ranking hot-list">
+    <text>{{ hotsales }}</text>
+    <navigator class="viewall">{{ seeall }} ></navigator>
+  </view>
+  <view class="hot-item">
+    <image class="hot-pick" src="https://wujunhui.xyz/book-santi.png"></image>
+    <view class="santi">
+      <view class="santi-title">三体：死神永生</view>
+      <view class="author">作者：刘慈欣</view>
+    </view>
+    <view class="content">
+      <view>刘慈欣创作的系列长篇科幻小说地球往事三部曲的第三部作品...</view>
+    </view>
+  </view>
+</view>

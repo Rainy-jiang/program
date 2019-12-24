@@ -10,77 +10,80 @@ Page({
     popular:'热门搜索',
     hotsales:'热销量',
     seeall:'查看全部',
-    vertical: false,
-    circular: true,
     length: 3.5,
-    list: [{
-      title: '科幻',
-      url: 'https://wujunhui.xyz/fenlei1.png'
+    nums:1.1,
+    list:[],
+    author:[],
+    book:[],
+    populars:[],
+    hotlist: ['#f54d82', '#59b080', '#ec575e', '#9060e8', '#ded658'],
+    volume:[{
+      title:'三体：死神永生',
+      author:'作者：刘慈欣',
+      content:'刘慈欣创作的系列长篇科幻小说地球往事三部曲的第三部作品...',
+      url:'https://wujunhui.xyz/book-santi.png'
     }, {
-      title: '生活',
-      url: 'https://wujunhui.xyz/fenlei2.png'
-    }, {
-      title: '露营',
-      url: 'https://wujunhui.xyz/fenlei3.png '
-    }, {
-      title: '职场',
-      url: 'https://wujunhui.xyz/fenlei2.png '
-    }, {
-      title: '露营',
-      url: 'https://wujunhui.xyz/fenlei3.png '
-    }],
-    author: [{
-      name: '刘慈欣',
-      url: 'https://wujunhui.xyz/zz-lcx.png'
-    }, {
-      name: '田小花',
-        url: 'https://wujunhui.xyz/zz-txh.png'
-    }, {
-      name: '马尔克斯',
-        url: 'https://wujunhui.xyz/zz-meks.png'
-    }, {
-      name: '余秋雨',
-        url: 'https://wujunhui.xyz/zz-txh.png'
-    }, {
-        name: '马尔克斯',
-        url: 'https://wujunhui.xyz/zz-meks.png'
-    }],
-    book:[{
-      title:'三体:死神永生',
-      author:'刘慈欣',
-      url:'https://wujunhui.xyz/book-santi.png',
-    },{
-      title:'人类简史',
-      author:'尤瓦尔·赫拉利',
-        url:'https://wujunhui.xyz/book-rljs.png'
+        title: '三体：死神永生',
+        author: '作者：刘慈欣',
+        content: '刘慈欣创作的系列长篇科幻小说地球往事三部曲的第三部作品...',
+        url: 'https://wujunhui.xyz/book-santi.png'
       }, {
-        title: '徐三关卖血记',
-        author: '余华',
-        url: 'https://wujunhui.xyz/book-xsgmxj.png'
+        title: '三体：死神永生',
+        author: '作者：刘慈欣',
+        content: '刘慈欣创作的系列长篇科幻小说地球往事三部曲的第三部作品...',
+        url: 'https://wujunhui.xyz/book-santi.png'
       }, {
-        title: '未来简史',
-        author: '尤瓦尔·赫拉利',
-        url: 'https://wujunhui.xyz/book-wljs.png'
+        title: '三体：死神永生',
+        author: '作者：刘慈欣',
+        content: '刘慈欣创作的系列长篇科幻小说地球往事三部曲的第三部作品...',
+        url: 'https://wujunhui.xyz/book-santi.png'
       }, {
-        title: '自私的基因',
-        author: '理查德·道金斯',
-        url: 'https://wujunhui.xyz/book-zsdjy.png'
-      }, {
-        title: '百年孤独',
-        author: '马尔克斯',
-        url: 'https://wujunhui.xyz/book-bngd.png'
+        title: '三体：死神永生',
+        author: '作者：刘慈欣',
+        content: '刘慈欣创作的系列长篇科幻小说地球往事三部曲的第三部作品...',
+        url: 'https://wujunhui.xyz/book-santi.png'
       }]
   },
 
   onLoad: function() {
+    wx.request({
+      url: 'https://wujunhui.xyz/getfenleilist',
+      success: (res) =>{
+        this.setData({
+          list:res.data
+        })
+      }
+    })
+    wx.request({
+      url: 'https://wujunhui.xyz/getwriters',
+      success: (res) => {
+        this.setData({
+          author: res.data
+        })
+      }
+    })
+    wx.request({
+      url: 'https://wujunhui.xyz/getbooks',
+      success: (res) => {
+        this.setData({
+          book: res.data.splice(0,6)
+        })
+      }
+    })
+    wx.request({
+      url: 'https://wujunhui.xyz/gethostser',
+      success: (res) => {
+        this.setData({
+          populars: res.data
+        })
+      }
+    })
+    this.setData({
+      hotlist:this.data.hotlist.sort((a,b) => {
+        return Math.random() - 0.5
+      })
+    })
+    
 
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  }
 })

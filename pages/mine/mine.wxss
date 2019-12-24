@@ -1,0 +1,96 @@
+/* pages/mine/mine.wxss */
+
+.setup {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  color: #fff;
+}
+.icon-shezhi {
+  font-size: 45rpx;
+}
+.portrait{
+  height: 240rpx;
+  width: 100%;
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.pick{
+  width: 240rpx;
+  height: 240rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+.nickname{
+  color: #fff;
+  font-size: 50rpx;
+  margin-top: 30rpx;
+}
+.message{
+  display: flex;
+  justify-content: space-between;
+}
+.megitem{
+  display: flex;
+  flex-direction: column;
+}
+.address{
+  color: #b5b7c5;
+  font-size: 14px;
+}
+.share{
+  width: 180rpx;
+  height: 64rpx;
+  border: 1px solid #545d66;
+  border-radius: 10rpx;
+  color: #9497ab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 165rpx;
+}
+.icon-fenxiang{
+  padding-right: 10rpx;
+}
+.information{
+  width: 680rpx;
+  height: 126rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #2b323b;
+  border-radius: 10rpx;
+  margin-top: 50rpx;
+  margin-bottom: 30rpx;
+}
+.infor{
+  border-right: 1px solid #363c45;
+  width: 227rpx;
+  text-align: center;
+  color: #fff;
+}
+.infor:last-child{
+  border: none;
+}
+.num-title{
+  color: #75808d;
+  font-size: 14px;
+}
+.infor-list{
+  width: 100%;
+  height: 140rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #dcdeea;
+  border-bottom: 1px solid #333c47;
+}
+.number{
+  background: #fb6894;
+  padding:0rpx 10rpx;
+  border-radius: 50%;
+}
+.money{
+  color: #fb6894;
+}

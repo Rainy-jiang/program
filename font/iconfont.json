@@ -13,6 +13,76 @@
       "unicode_decimal": 58884
     },
     {
+      "icon_id": "48207948",
+      "name": "心",
+      "font_class": "xin",
+      "unicode": "e982",
+      "unicode_decimal": 59778
+    },
+    {
+      "icon_id": "48207949",
+      "name": "评论",
+      "font_class": "pinglun",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "48207950",
+      "name": "方块",
+      "font_class": "fangkuai",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "48207951",
+      "name": "菜单",
+      "font_class": "caidan",
+      "unicode": "e66e",
+      "unicode_decimal": 58990
+    },
+    {
+      "icon_id": "48207952",
+      "name": "分享",
+      "font_class": "fenxiang",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "48207953",
+      "name": "书架",
+      "font_class": "shujia",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "48159848",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "48207954",
+      "name": "评论",
+      "font_class": "pinglun1",
+      "unicode": "e627",
+      "unicode_decimal": 58919
+    },
+    {
+      "icon_id": "48207955",
+      "name": "加 (4)",
+      "font_class": "jia",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "48207956",
+      "name": "删 除",
+      "font_class": "shanchu",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
       "icon_id": "48156353",
       "name": "列表",
       "font_class": "liebiao",
@@ -20,11 +90,18 @@
       "unicode_decimal": 58913
     },
     {
-      "icon_id": "5673361",
-      "name": "搜索",
-      "font_class": "sousuo",
-      "unicode": "e61a",
-      "unicode_decimal": 58906
+      "icon_id": "48207957",
+      "name": "设 置",
+      "font_class": "shezhi",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "48207958",
+      "name": "星星",
+      "font_class": "xingxing",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
     }
   ]
 }

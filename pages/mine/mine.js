@@ -1,33 +1,52 @@
-// pages/explore/explore.js
+// pages/mine/mine.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    num:1,
-    url: 'https://wujunhui.xyz/book-santi.png',
-    title: '三体：死神永生',
-    author: '刘慈欣',
-    list: [
-      'https://wujunhui.xyz/zz-wzj.png',
-      'https://wujunhui.xyz/zz-zdh.png',
-      'https://wujunhui.xyz/zz-zxj.png',
-      'https://wujunhui.xyz/zz-zxl.png',
-    ]
-  },
-  change: function(e) {
-    console.log(e)
-    this.setData({
-      num:e.target.dataset.num
-    })
+    pickurl: '',
+    nickname: '',
+    country: '',
+    province: '',
+    city: '',
+    list: [{
+      num: 1286,
+      title: '关注'
+    }, {
+      num: 3368,
+      title: '粉丝'
+    }, {
+      num: 6673,
+      title: '喜欢'
+    }],
+    arry: [{
+      title: '个人信息',
+      icon: '>'
+    }, {
+      title: '我的消息',
+      icon: '>'
+    }, {
+      title: '账户余额',
+      icon: '>'
+    }, {
+      title: '我的评论',
+      icon: '>'
+    }, ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
-
+  onLoad: function() {
+    this.setData({
+      pickurl: app.globalData.avatarUrl,
+      nickname: app.globalData.nickName,
+      country: app.globalData.country,
+      province: app.globalData.province,
+      city: app.globalData.city
+    })
   },
 
   /**

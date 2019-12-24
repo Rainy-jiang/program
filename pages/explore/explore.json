@@ -3,5 +3,7 @@
     "navigationBarBackgroundColor": "#21272e",
     "navigationBarTextStyle": "white",
     "backgroundColorTop": "#21272e",
-  "usingComponents": {}
+    "usingComponents": {
+      "works":"../../components/works/works"
+    }
 }

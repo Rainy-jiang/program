@@ -1,2 +1,30 @@
 <!--pages/explore/explore.wxml-->
 
+<view class="container">
+  <view class="menu">
+    <view class="menu-top {{ num == 1 ? 'active' :'' }}" bindtap="change" data-num="1">
+      <icon class="iconfont icon-caidan"></icon>
+    </view>
+    <view class="{{ num == 2 ? 'active' :'' }}" bindtap="change" data-num="2">
+      <icon class="iconfont icon-fangkuai"></icon>
+    </view>
+  </view>
+  <view>
+    <view class="explore-item">
+      <image class="pick" src="{{ url }}"></image>
+      <view class="title">{{ title }}</view>
+      <view class="author">{{ author }}</view>
+    </view>
+    <view class="user-message">
+      <image class="user-pick" wx:for="{{ list }}" wx:key="index" src="{{ item }}"></image>
+    </view>
+    <view class="people">457 人已阅读</view>
+    <navigator class="recommend">
+      <image class="recommend-pick" src="https://wujunhui.xyz/zz-meks.png"></image>
+      <view class="nickname">
+        <view class="">陈小东</view>
+        <view class="rec">推荐</view>
+      </view>
+    </navigator>
+  </view>
+</view>

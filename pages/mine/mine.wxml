@@ -1,0 +1,47 @@
+<!--pages/mine/mine.wxml-->
+<view class="container">
+  <navigator class="setup">
+    <icon class="iconfont icon-shezhi"></icon>
+  </navigator>
+  <view class="portrait">
+    <view class="message">
+      <image src="{{ pickurl}}" class="pick"></image>
+      <view class="megitem">
+        <view class="nickname">{{ nickname }}</view>
+        <view class="address">
+          <text>{{ province }} · </text>
+          <text>{{ city }}</text>
+        </view>
+      </view>
+    </view>
+    <view class="share">
+      <icon class="iconfont icon-fenxiang"></icon>
+      <view>分享</view>
+    </view>
+  </view>
+  <view class="information">
+    <view wx:for="{{ list }}" wx:key="*this" class="infor">
+      <view class="num">{{ item.num }}</view>
+      <text class="num-title">{{ item.title }}</text>
+    </view>
+  </view>
+  <navigator class="infor-list">
+      <view>个人信息</view>
+      <mp-icon icon="arrow" color="#dcdeea" size="{{14}}"></mp-icon>
+  </navigator>
+  <navigator class="infor-list">
+      <view>我的消息</view>
+      <text class="number">6</text>
+  </navigator>
+  <navigator class="infor-list">
+      <view>账户余额</view>
+      <view>
+        <text class="money">1375.00</text>
+        <mp-icon icon="arrow" color="#dcdeea" size="{{14}}"></mp-icon>
+      </view>
+  </navigator>
+  <navigator class="infor-list">
+      <view>我的评论</view>
+      <mp-icon icon="arrow" color="#dcdeea" size="{{14}}"></mp-icon>
+  </navigator>
+</view>

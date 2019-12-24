@@ -19,6 +19,12 @@ App({
           // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
           wx.getUserInfo({
             success: res => {
+              this.globalData.avatarUrl = JSON.parse(res.rawData).avatarUrl;
+              this.globalData.nickName = JSON.parse(res.rawData).nickName;
+              this.globalData.country = JSON.parse(res.rawData).country;
+              this.globalData.province = JSON.parse(res.rawData).province;
+              this.globalData.city = JSON.parse(res.rawData).city;
+
               // 可以将 res 发送给后台解码出 unionId
               this.globalData.userInfo = res.userInfo
 
@@ -30,10 +36,17 @@ App({
             }
           })
         }
-      }
+      
+      },
+      
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    avatarUrl:'',
+    nickName:'',
+    country:'',
+    province:'',
+    city:''
   }
 })

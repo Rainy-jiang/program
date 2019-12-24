@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/explore/explore",
     "pages/index/index",
     "pages/logs/logs"
   ],
@@ -14,7 +15,7 @@
       {
         "selectedIconPath": "./image/diqiu1.png",
         "iconPath": "./image/diqiu.png",
-        "pagePath": "pages/logs/logs"
+        "pagePath": "pages/explore/explore"
       },
       {
         "selectedIconPath": "./image/shu1.png",

@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "navigationBarTitleText": "我的",
   "navigationBarBackgroundColor": "#21272e",
   "navigationBarTextStyle": "white",
@@ -6,4 +7,7 @@
   "usingComponents": {
     "mp-icon": "../../weui-miniprojram/icon/icon"
   }
+=======
+  "usingComponents": {}
+>>>>>>> books
 }

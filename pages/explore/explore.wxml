@@ -2,10 +2,17 @@
 
 <view class="container">
   <view class="menu">
+<<<<<<< HEAD
     <view class="menu-top {{ num == 1 ? 'active' :'' }}" bindtap="change" data-num="1">
       <icon class="iconfont icon-caidan"></icon>
     </view>
     <view class="{{ num == 2 ? 'active' :'' }}" bindtap="change" data-num="2">
+=======
+    <view class="menu-top active">
+      <icon class="iconfont icon-caidan"></icon>
+    </view>
+    <view class="menu-top">
+>>>>>>> books
       <icon class="iconfont icon-fangkuai"></icon>
     </view>
   </view>

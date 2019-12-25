@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* pages/sign/sign.wxss */
 .userinfo {
 display: flex;
@@ -20,3 +21,6 @@ color: #aaa;
 margin-top: 200px;
 color: #fff;
 }
+=======
+/* pages/sign/sign.wxss */
+>>>>>>> books

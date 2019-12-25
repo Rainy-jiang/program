@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /* pages/mine/mine.wxss */
 
 .setup {
@@ -95,6 +95,3 @@
 .money{
   color: #fb6894;
 }
-=======
-/* pages/mine/mine.wxss */
->>>>>>> books

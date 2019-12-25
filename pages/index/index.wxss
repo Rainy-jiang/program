@@ -116,6 +116,7 @@
   background: #2a313a;
   border-radius: 30rpx;
   margin-bottom: 85rpx;
+  margin-top: 32rpx;
 }
 .hot-pick{
   position: absolute;
@@ -154,4 +155,11 @@
   text-overflow: ellipsis;
   -webkit-line-clamp:2; 
   -webkit-box-orient: vertical;
+}
+.list{
+  position: absolute;
+  right: 30rpx;
+  top: -15rpx;
+  color: #969baf;
+  font-size: 60rpx;
 }

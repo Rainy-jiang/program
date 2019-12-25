@@ -2,28 +2,28 @@
 
 <view class="container">
   <view class="menu">
-<<<<<<< HEAD
-    <view class="menu-top {{ num == 1 ? 'active' :'' }}" bindtap="change" data-num="1">
+    <view class="menu-top {{ flag ? 'active' : '' }}" bindtap="change">
       <icon class="iconfont icon-caidan"></icon>
     </view>
-    <view class="{{ num == 2 ? 'active' :'' }}" bindtap="change" data-num="2">
-=======
-    <view class="menu-top active">
-      <icon class="iconfont icon-caidan"></icon>
-    </view>
-    <view class="menu-top">
->>>>>>> books
+    <view class="{{ flag ? '' : 'active' }}">
       <icon class="iconfont icon-fangkuai"></icon>
     </view>
   </view>
-  <view>
+  <view class="content" hidden="{{ !flag }}">
+    <view class="content-list" bindtap="handle" data-info="{{ item }}" wx:for="{{ list }}" wx:key="index">
+      <image class="content-pick" src="{{ item.touxiang }}"></image>
+      <view class="content-title">{{ item.bookname }}</view>
+    </view>
+  </view>
+
+  <view hidden="{{ flag }}">
     <view class="explore-item">
-      <image class="pick" src="{{ url }}"></image>
-      <view class="title">{{ title }}</view>
-      <view class="author">{{ author }}</view>
+      <image class="pick" src="{{ showinfo.touxiang }}"></image>
+      <view class="title">{{ showinfo.bookname }}</view>
+      <view class="author">{{ showinfo.writername }}</view>
     </view>
     <view class="user-message">
-      <image class="user-pick" wx:for="{{ list }}" wx:key="index" src="{{ item }}"></image>
+      <image class="user-pick" wx:for="{{ pick }}" wx:key="index" src="{{ item.touxiang }}"></image>
     </view>
     <view class="people">457 人已阅读</view>
     <navigator class="recommend">

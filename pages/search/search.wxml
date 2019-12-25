@@ -1,0 +1,32 @@
+<!--pages/search/search.wxml-->
+<view class="container">
+  <view class="search-item">
+    <view class="search">
+      <icon class="iconfont icon-sousuo"></icon>
+      <navigator class="searcheng" url="pages/search/search">
+        <input placeholder="搜索..." placeholder-style="color:#9da3b4;font-size:14px"></input>
+      </navigator>
+    </view>
+    <navigator class="cancel">取消</navigator>
+  </view>
+  <view class="reading">
+    <text>{{ hotSearch }}</text>
+    <navigator class="more">{{ more }} ></navigator>
+  </view>
+  <view class="reading-content">
+    <view class="reading-list" wx:for="{{ list }}" wx:key="index">
+      <image class="pick" src="{{ item.touxiang }}"></image>
+      <view class="book-title">{{ item.bookname }}</view>
+      <view class="book-author">{{ item.writername }}</view>
+    </view>
+  </view>
+  <view class="reading">
+    <text>{{ history }}</text>
+    <navigator class="more"> 
+      <icon class="iconfont icon-shanchu"></icon>
+    </navigator>
+  </view>
+  <view class="history">
+    <navigator class="history-list" wx:for="{{ popular }}" wx:key="index">{{ item.title }}</navigator>
+  </view>
+</view>

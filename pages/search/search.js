@@ -1,46 +1,34 @@
-// pages/explore/explore.js
+// pages/search/search.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    flag:true,
-    list:[],
-    showinfo:null,
-    pick:[],
-  },
-  handle(e){
-    console.log(e)
-    this.setData({
-      flag:false,
-      showinfo: e.currentTarget.dataset.info
-    })
-  },
-  change(){
-    this.setData({
-      flag:true
-    })
+      hotSearch:'热门搜索',
+      more: '查看全部',
+      history:'搜索历史',
+      list:[],
+      popular:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
-    flag:true
+  onLoad: function (options) {
     wx.request({
       url: 'https://wujunhui.xyz/getbooks',
       success: (res) => {
         this.setData({
-          list: res.data
+          list: res.data.splice(0, 3)
         })
       }
     })
     wx.request({
-      url: 'https://wujunhui.xyz/getwriters',
-      success: (res) => {
+      url: 'https://wujunhui.xyz/gethostser',
+      success:(res) => {
         this.setData({
-          pick: res.data.splice(3,4)
+          popular:res.data
         })
       }
     })
@@ -49,49 +37,49 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function() {
+  onReady: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function() {
+  onShow: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function() {
+  onHide: function () {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function() {
+  onUnload: function () {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function() {
+  onPullDownRefresh: function () {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function() {
+  onReachBottom: function () {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function() {
+  onShareAppMessage: function () {
 
   }
 })

@@ -1,11 +1,14 @@
 {
   "pages": [
+    "pages/index/index",
+    "pages/search/search",
+    "pages/sign/sign",
+    "pages/science/science",
+    "pages/books/books",
     "pages/explore/explore",
     "components/works/works",
-    "pages/mine/mine",
-    "pages/sign/sign",
-    "pages/books/books",
-    "pages/index/index"
+    "pages/mine/mine"
+    
   ],
   "tabBar": {
     "backgroundColor": "#2a313a",
@@ -34,12 +37,11 @@
   },
   "window": {
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#21272e",
+    "navigationBarTextStyle": "white",
     "backgroundColor": "#000000",
     "enablePullDownRefresh": true,
-    "backgroundColorTop": "#4ebfff"
+    "backgroundColorTop": "#21272e"
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

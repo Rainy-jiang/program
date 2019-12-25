@@ -1,2 +1,28 @@
 <!--pages/books/books.wxml-->
-<text>pages/books/books.wxml</text>
+<view class="container">
+  <navigator class="icon">
+    <icon class="iconfont icon-liebiao"></icon>
+  </navigator>
+  <view class="reading">
+    <text>{{ reading }}</text>
+    <navigator class="more">{{ more }} ></navigator>
+  </view>
+  <view class="reading-content">
+    <view class="reading-list" wx:for="{{ list }}" wx:key="index">
+      <image class="pick" src="{{ item.touxiang }}"></image>
+      <view class="book-title">{{ item.bookname }}</view>
+      <view class="book-author">{{ item.writername }}</view>
+    </view>
+  </view>
+   <view class="reading">
+    <text>{{ readed }}</text>
+    <navigator class="more">{{ more }} ></navigator>
+  </view>
+  <view class="reading-content unread">
+    <view class="reading-list" wx:for="{{ unread }}" wx:key="index">
+      <image class="pick" src="{{ item.touxiang }}"></image>
+      <view class="book-title">{{ item.bookname }}</view>
+      <view class="book-author">{{ item.writername }}</view>
+    </view>
+  </view>
+</view>

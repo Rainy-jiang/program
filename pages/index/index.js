@@ -12,37 +12,13 @@ Page({
     seeall:'查看全部',
     length: 3.5,
     nums:1.1,
+    path: ['/pages/science/science', '/pages/science/science', '/pages/science/science', '/pages/science/science', '/pages/science/science', '/pages/science/science', '/pages/science/science',],
     list:[],
     author:[],
     book:[],
     populars:[],
     hotlist: ['#f54d82', '#59b080', '#ec575e', '#9060e8', '#ded658'],
-    volume:[{
-      title:'三体：死神永生',
-      author:'作者：刘慈欣',
-      content:'刘慈欣创作的系列长篇科幻小说地球往事三部曲的第三部作品...',
-      url:'https://wujunhui.xyz/book-santi.png'
-    }, {
-        title: '三体：死神永生',
-        author: '作者：刘慈欣',
-        content: '刘慈欣创作的系列长篇科幻小说地球往事三部曲的第三部作品...',
-        url: 'https://wujunhui.xyz/book-santi.png'
-      }, {
-        title: '三体：死神永生',
-        author: '作者：刘慈欣',
-        content: '刘慈欣创作的系列长篇科幻小说地球往事三部曲的第三部作品...',
-        url: 'https://wujunhui.xyz/book-santi.png'
-      }, {
-        title: '三体：死神永生',
-        author: '作者：刘慈欣',
-        content: '刘慈欣创作的系列长篇科幻小说地球往事三部曲的第三部作品...',
-        url: 'https://wujunhui.xyz/book-santi.png'
-      }, {
-        title: '三体：死神永生',
-        author: '作者：刘慈欣',
-        content: '刘慈欣创作的系列长篇科幻小说地球往事三部曲的第三部作品...',
-        url: 'https://wujunhui.xyz/book-santi.png'
-      }]
+    volume:[]
   },
 
   onLoad: function() {
@@ -67,6 +43,14 @@ Page({
       success: (res) => {
         this.setData({
           book: res.data.splice(0,6)
+        })
+      }
+    })
+    wx.request({
+      url: 'https://wujunhui.xyz/getbooks',
+      success: (res) => {
+        this.setData({
+          volume: res.data
         })
       }
     })

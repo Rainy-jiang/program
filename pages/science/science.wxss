@@ -1,0 +1,61 @@
+/* pages/science/science.wxss */
+.icon{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  color: #fff;
+  padding-right: 10rpx;
+  padding-bottom: 40rpx;
+}.hot-item{
+  position: relative;
+  width: 680rpx;
+  height: 250rpx;
+  background: #2a313a;
+  border-radius: 30rpx;
+  margin-bottom: 85rpx;
+}
+.hot-pick{
+  position: absolute;
+  top: -32rpx;
+  left: 32rpx;
+  width: 168rpx;
+  height: 250rpx;
+  margin-right: 27rpx;
+}
+.santi{
+  float: right;
+  width: 330rpx;
+  height: 130rpx;
+  margin-right: 95rpx;
+  border-bottom: 1px solid #545a71;
+}
+.santi-title{
+  color: #fff;
+  padding-top: 28rpx;
+}
+.author{
+  color: #545a71;
+  font-size: 14px;
+  padding-top: 10rpx;
+}
+.content{
+  float: right;
+  width: 385rpx;
+  height: 70rpx;
+  margin-right: 40rpx;
+  margin-top: 20rpx;
+  color: #545a71;
+  font-size: 24rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp:2; 
+  -webkit-box-orient: vertical;
+}
+.list{
+  position: absolute;
+  right: 30rpx;
+  top: -15rpx;
+  color: #969baf;
+  font-size: 60rpx;
+}

@@ -13,7 +13,27 @@
   color: #fff;
 }
 .iconfont{
-  font-size: 45rpx;
+  font-size: 50rpx;
+}
+.content{
+  padding: 0rpx 60rpx;
+  box-sizing: border-box;
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.content-list{
+  width: 268rpx;
+  margin-top: 80rpx;
+}
+.content-pick{
+  width: 268rpx;
+  height: 400rx;
+}
+.content-title{
+  color: #fff;
+  text-align: center;
+  margin-top: 20rpx;
 }
 .explore-item{
   margin-top: 10rpx;
@@ -52,6 +72,7 @@
   color: #a2a8ba;
   font-size: 20rpx;
   margin-top: 30rpx;
+  text-align: center;
 }
 .recommend{
   width: 238rpx;

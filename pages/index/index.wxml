@@ -6,7 +6,9 @@
   </view>
   <view class="search">
     <icon class="iconfont icon-sousuo"></icon>
-    <input class="searcheng" placeholder="搜索..." placeholder-style="color:#9da3b4;font-size:14px"></input>
+    <navigator url="/pages/search/search">
+      <input class="searcheng" placeholder="搜索..." placeholder-style="color:#9da3b4;font-size:14px"></input>
+    </navigator>
   </view>
   <view class="ranking">
     <text>{{ ranking }}</text>
@@ -14,9 +16,9 @@
   </view>
   <view class="sort">
     <swiper display-multiple-items="{{ length }}" class="sort-swp">
-      <block wx:for="{{ list }}" wx:key="*this">
+      <block wx:for="{{ list }}" wx:key="index">
         <swiper-item class="swiperStyle">
-          <navigator url="">
+          <navigator url="{{ path[index] }}">
             <image class="sort-pick" src="{{ item.touxiang }}"></image>
             <text>{{ item.type }}</text>
           </navigator>
@@ -29,8 +31,8 @@
     <navigator class="viewall">{{ seeall }} ></navigator>
   </view>
   <view class="sort">
-    <swiper display-multiple-items="{{ length }}"  class="sort-swp">
-      <block wx:for="{{ author }}" wx:key="*this">
+    <swiper display-multiple-items="{{ length }}" class="sort-swp">
+      <block wx:for="{{ author }}" wx:key="index">
         <swiper-item class="swiperStyle">
           <navigator url="">
             <image class="sort-pick" src="{{ item.touxiang }}"></image>
@@ -68,12 +70,13 @@
       <block wx:for="{{ volume }}" wx:key="index">
         <swiper-item>
           <view class="hot-item">
-            <image class="hot-pick" src="{{ item.url }}"></image>
+            <image class="hot-pick" src="{{ item.touxiang }}"></image>
             <view class="santi">
-              <view class="santi-title">{{ item.title }}</view>
-              <view class="author">{{ item.author }}</view>
+              <view class="santi-title">{{ item.bookname }}</view>
+              <view class="author">{{ item.writername }}</view>
             </view>
-            <view class="content">{{ item.content }}</view>
+            <view class="content">{{ item.about }}</view>
+            <navigator class="list">...</navigator>
           </view>
         </swiper-item>
       </block>

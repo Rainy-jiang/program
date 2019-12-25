@@ -1,5 +1,4 @@
 <!--pages/mine/mine.wxml-->
-<<<<<<< HEAD
 <view class="container">
   <navigator class="setup">
     <icon class="iconfont icon-shezhi"></icon>
@@ -46,6 +45,3 @@
       <mp-icon icon="arrow" color="#dcdeea" size="{{14}}"></mp-icon>
   </navigator>
 </view>
-=======
-<text>pages/mine/mine.wxml</text>
->>>>>>> books

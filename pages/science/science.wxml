@@ -1,0 +1,15 @@
+<!--pages/science/science.wxml-->
+<view class="container">
+  <navigator class="icon">
+    <icon class="iconfont icon-liebiao"></icon>
+  </navigator>
+  <view class="hot-item" wx:for="{{ volume }}" wx:key="index">
+    <image class="hot-pick" src="{{ item.touxiang }}"></image>
+    <view class="santi">
+      <view class="santi-title">{{ item.bookname }}</view>
+      <view class="author">{{ item.writername }}</view>
+    </view>
+    <view class="content">{{ item.about }}</view>
+    <navigator class="list">...</navigator>
+  </view>
+</view>

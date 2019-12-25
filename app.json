@@ -1,8 +1,11 @@
 {
   "pages": [
     "pages/explore/explore",
-    "pages/index/index",
-    "pages/logs/logs"
+    "components/works/works",
+    "pages/mine/mine",
+    "pages/sign/sign",
+    "pages/books/books",
+    "pages/index/index"
   ],
   "tabBar": {
     "backgroundColor": "#2a313a",
@@ -20,12 +23,12 @@
       {
         "selectedIconPath": "./image/shu1.png",
         "iconPath": "./image/shu.png",
-        "pagePath": "pages/logs/logs"
+        "pagePath": "pages/books/books"
       },
       {
         "selectedIconPath": "./image/wodedangxuan1.png",
         "iconPath": "./image/wodedangxuan.png",
-        "pagePath": "pages/logs/logs"
+        "pagePath": "pages/mine/mine"
       }
     ]
   },

@@ -1,1 +1,81 @@
 /* pages/explore/explore.wxss */
+.menu{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  color: #71768c;
+  margin-right: 30rpx;
+}
+.menu-top{
+  margin-right: 20rpx;
+}
+.active{
+  color: #fff;
+}
+.iconfont{
+  font-size: 45rpx;
+}
+.explore-item{
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pick{
+    width: 390rpx;
+    height: 580rpx;
+}
+.title{
+  margin-top: 45rpx;
+  color: #fff;
+}
+.author{
+  margin-top: 33rpx;
+  color: #565b6a;
+}
+.user-message{
+  margin-top: 70rpx;
+  width: 400rpx;
+  box-sizing: border-box;
+  border-top: 2rpx solid #2e3640;
+  display: flex;
+  justify-content: center;
+}
+.user-pick{
+  width: 68rpx;
+  height: 68rpx;
+  margin-top: 48rpx;
+  margin-right: 10rpx;
+  border-radius: 50%;
+}
+.people{
+  color: #a2a8ba;
+  font-size: 20rpx;
+  margin-top: 30rpx;
+}
+.recommend{
+  width: 238rpx;
+  height: 84rpx;
+  background: #15191d;
+  border-top-left-radius: 40rpx;
+  border-bottom-left-radius: 40rpx;
+  position: fixed;
+  bottom: 30rpx;
+  right: 0rpx;
+}
+.recommend-pick{
+  float: left;
+  width: 68rpx;
+  height: 68rpx;
+  border-radius: 50%;
+  margin:9rpx;
+}
+.nickname{
+  float: left;
+  color: #fff;
+  font-size: 12px;
+  margin: 10rpx 0rpx;
+}
+.rec{
+  color: #626673;
+}

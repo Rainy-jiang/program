@@ -1,0 +1,88 @@
+<!--pages/author/author.wxml-->
+<view class="container">
+  <navigator class="icon">
+    <icon class="iconfont icon-liebiao"></icon>
+  </navigator>
+  <view class="ranking">
+    <view class="rank-left author">
+      <view class="second">
+        <image class="huangguan2" src="../../image/huangguan2.png"></image>
+        <image class="pick" src="https://wujunhui.xyz/zz-lcx.png"></image>
+        <view class="two num">2</view>
+      </view>
+      <view class="nickname">余秋雨</view>
+      <view class="fans">5869 粉丝</view>
+    </view>
+    <view class="rank-center author">
+      <view class="second">
+        <image class="huangguan1" src="../../image/huangguan1.png"></image>
+        <image class="pick1" src="https://wujunhui.xyz/zz-yqy.png"></image>
+        <view class="one num">1</view>
+      </view>
+      <view class="nickname first">刘慈欣</view>
+      <view class="fans">6598 粉丝</view>
+    </view>
+    <view class="rank-right author">
+      <view class="second">
+        <image class="huangguan2" src="../../image/huangguan3.png"></image>
+        <image class="pick" src="https://wujunhui.xyz/zz-wyy.png"></image>
+        <view class="three num">3</view>
+      </view>
+      <view class="nickname third">田小花</view>
+      <view class="fans">4526 粉丝</view>
+    </view>
+  </view>
+  <view class="hot-author">
+    <view class="hot-title">
+      <view>热门作者</view>
+      <navigator class="seeall">查看全部 ></navigator>
+    </view>
+    <view class="author">
+      <swiper display-multiple-items="{{ length }}" class="swiper">
+        <block wx:for="{{ list }}" wx:key="index">
+          <swiper-item class="author-list">
+            <image class="author-pick" src="{{ item.touxiang }}"></image>
+            <view>{{ item.name }}</view>
+            <view class="pay {{ num == index ? 'active' : '' }}" bindtap="change" data-num="{{ index }}">{{ pay }}</view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+
+   <view class="hot-author">
+    <view class="hot-title">
+      <view>新晋作者</view>
+      <navigator class="seeall">查看全部 ></navigator>
+    </view>
+    <view class="author">
+      <swiper display-multiple-items="{{ length }}" class="swiper">
+        <block wx:for="{{ list }}" wx:key="index">
+          <swiper-item class="author-list">
+            <image class="author-pick" src="{{ item.touxiang }}"></image>
+            <view>{{ item.name }}</view>
+            <view class="pay {{ num == index ? 'active' : '' }}" bindtap="change" data-num="{{ index }}">{{ pay }}</view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+
+   <view class="hot-author">
+    <view class="hot-title">
+      <view>其他作者</view>
+      <navigator class="seeall">查看全部 ></navigator>
+    </view>
+    <view class="author">
+      <swiper display-multiple-items="{{ length }}" class="swiper">
+        <block wx:for="{{ list }}" wx:key="index">
+          <swiper-item class="author-list">
+            <image class="author-pick" src="{{ item.touxiang }}"></image>
+            <view>{{ item.name }}</view>
+            <view class="pay {{ num == index ? 'active' : '' }}" bindtap="change" data-num="{{ index }}">{{ pay }}</view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+</view>

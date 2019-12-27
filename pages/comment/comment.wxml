@@ -1,0 +1,28 @@
+<!--pages/comment/comment.wxml-->
+<view class="container">
+  <view class="pinglun">
+    <icon class="iconfont icon-pinglun1"></icon>
+  </view>
+  <view class="comment-message" wx:for="{{ list }}" wx:key="index">
+    <view class="comment-user">
+      <image class="user-pick" src="{{ item.pick }}"></image>
+      <text class="nickname">{{ item.nickname }}</text>
+    </view>
+    <view class="comment-content">
+      <text>{{ item.content }}</text>
+      <view class="comment-item">
+        <view class="time">{{ item.time }}</view>
+        <view class="number">
+          <view>
+            <icon class="iconfont icon-xin comicon"></icon>
+            <text>134</text>
+          </view>
+          <view>
+            <icon class="iconfont icon-pinglun comicon"></icon>
+            <text>89</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

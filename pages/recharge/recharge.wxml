@@ -1,0 +1,33 @@
+<!--pages/recharge/recharge.wxml-->
+<view class="container">
+  <view class="blanse">
+    <view class="blanse-my">我的余额（元）</view>
+    <view class="money">
+      <text>￥</text>
+      <input bindinput="content" value="{{ isvalue }}"></input>
+    </view>
+  </view> 
+  <view class="next" bindtap="handle">下一步</view>
+</view>
+<view class="background" hidden="{{ flag }}">
+  <view class="payment">
+  <image bindtap="handles" class="delete" src="../../image/x.png"></image>
+    <view class="confirm">确认付款（元）</view>
+    <view class="moneys">{{ isvalue }}</view>
+    <view class="message">
+      <view>订单信息</view>
+      <view class="chongzhi">充值</view>
+    </view>
+    <navigator class="message">
+      <view>付款方式</view>
+      <view class="chongzhi">
+      <text>中国银行卡(0288)</text>
+      <mp-icon icon="arrow" color="#dcdeea" size="{{14}}"></mp-icon>
+      </view>
+    </navigator>
+    <view class="yanzheng">
+    <image class="zhiwen" src="../../image/zhiwen.png"></image>
+      <text>指纹验证或 <text class="mima">输入密码</text></text>
+    </view>
+  </view>
+</view>

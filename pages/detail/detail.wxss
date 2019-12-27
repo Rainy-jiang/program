@@ -1,0 +1,248 @@
+/* pages/detail/detail.wxss */
+.jobs-wrapper{
+  width: 100%;
+  height: 450rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  border-bottom: 1px solid #343946;
+}
+.pick{
+  width: 216rpx;
+  height: 320rpx;
+  padding-right: 30rpx;
+}
+.book-message{
+  width: 430rpx;
+}
+.bookname{
+  color: #fff;
+  font-size: 36rpx;
+}
+.writername{
+  color: #6d7783;
+  font-size: 26rpx;
+  padding: 25rpx 0rpx;
+}
+.about{
+  color: #6d7783;
+  font-size: 24rpx;
+  margin-bottom: 30rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp:2; 
+  -webkit-box-orient: vertical;
+}
+.icon-xingxing{
+  color: #fb6894;
+  padding:0rpx 5rpx;
+}
+.pingfen{
+  color: #ffce44;
+  padding:10rpx;
+}
+.collect{
+  width: 100%;
+  height: 126rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  border-bottom: 1px solid #343946;
+}
+.collect{
+  color: #fff;
+  font-size: 26rpx
+}
+.icon-xin,.icon-fenxiang,.icon-shujia{
+  color: #70758b;
+  padding-right: 20rpx;
+}
+.active{
+  color: #e9392f;
+}
+.detail-content{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-bottom: 1px solid #343946;
+}
+.detail-title{
+  color: #fff;
+  padding: 40rpx 0rpx;
+}
+.detail-about{
+  color: #868dab;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp:5; 
+  -webkit-box-orient: vertical;
+  margin-bottom: 80rpx;
+}
+.catalog{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 50rpx 0rpx;
+  color:#fff;
+  border-bottom: 1px solid #343946;
+}
+.comment{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 53rpx 0rpx;
+  color: #fff;
+}
+.icon-pinglun1{
+  font-size: 55rpx;
+}
+.comment-num{
+  font-size: 20rpx;
+  color: #007aff;
+  padding-left: 23rpx;
+  display: inline-block;
+}
+.comment-message{
+  width: 100%;
+  padding-bottom: 170rpx;
+}
+.comment-user{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.user-pick{
+  width: 60rpx;
+  height: 60rpx;
+}
+.nickname{
+  color: #fff;
+  font-size: 28rpx;
+  padding-left: 25rpx;
+}
+.comment-content{
+  margin: 0rpx 20rpx 0rpx 88rpx;
+  color: #8188a5;
+  font-size: 26rpx;
+  border-bottom: 1px solid #343946;
+}
+.comment-item{
+  display: flex;
+  justify-content: space-between;
+  padding: 35rpx 0rpx;
+  align-items: center;
+}
+.number{
+  width: 190rpx;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 17rpx;
+}
+.comicon{
+  font-size: 24rpx;
+  padding-right: 15rpx;
+}
+.foot{
+  width: 100%;
+  height: 158rpx;
+  background: #373a49;
+  position: fixed;
+  bottom: 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.trysee{
+  width: 216rpx;
+  height: 94rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 94rpx;
+  background: #9295a9;
+  border-radius: 50rpx;
+}
+.purchase{
+  width: 370rpx;
+  height: 94rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 94rpx;
+  background: #fb6894;
+  border-radius: 50rpx;
+}
+.addto{
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0,.6);
+  position: fixed;
+  top: 0rpx;
+}
+.addto-item{
+  width: 550rpx;
+  height: 766rpx;
+  background: #373a48;
+  border-radius: 30rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -37%;
+  margin-top: -50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+.add-book{
+  width: 216rpx;
+  height: 320rpx;
+  padding: 80rpx 166rpx 50rpx;
+}
+.add-books{
+  width: 360rpx;
+  font-size: 37rpx;
+  text-align: center;
+  padding-bottom: 65rpx;
+}
+.ok{
+  width: 422rpx;
+  height: 95rpx;
+  background: #fb6894;
+  border-radius: 50rpx;
+  text-align: center;
+  line-height: 95rpx;
+}
+.share{
+  width: 100%;
+  height: 340rpx;
+  background: #2d353f;
+  position: fixed;
+  bottom: 0rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.share-pick{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+.share-item{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  background: #fff;
+  text-align: center;
+  line-height: 106rpx;
+}
+.share-x{
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 36rpx;
+  right: 39rpx;
+}

@@ -20,6 +20,13 @@ Page({
     hotlist: ['#f54d82', '#59b080', '#ec575e', '#9060e8', '#ded658'],
     volume:[]
   },
+  detail(e) {
+    app.globalData.content = e.currentTarget.dataset.num;
+  },
+  handle(e){
+    console.log(e)
+    app.globalData.author = e.currentTarget.dataset.num;
+  },
 
   onLoad: function() {
     wx.request({

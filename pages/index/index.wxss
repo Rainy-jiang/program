@@ -23,6 +23,7 @@
   margin-top: 10rpx;
   margin-left: 20rpx;
   width: 100%;
+  background: #2d353d;
 }
 .ranking{
   width: 680rpx;

@@ -1,0 +1,19 @@
+<!--pages/shopping/shopping.wxml-->
+<view class="container wrapper">
+  <view class="hot-item" wx:for="{{ volume }}" wx:key="index">
+    <image class="hot-pick" src="{{ item.touxiang }}"></image>
+    <view class="santi">
+      <view class="santi-title">{{ item.bookname }}</view>
+      <view class="author">{{ item.writername }}</view>
+    </view>
+    <view class="content">￥{{ item.money }}</view>
+    <navigator class="list">...</navigator>
+  </view>
+</view>
+<view class="foot">
+  <view class="total">
+    <text>总计（元）：<text class="red">150.00</text> </text>
+    <text>余额（元）：<text class="red">1375.00</text> </text>
+  </view>
+  <view class="parfor">购买</view>
+</view>

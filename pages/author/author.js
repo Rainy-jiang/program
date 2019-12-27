@@ -1,39 +1,39 @@
-// pages/books/books.js
-const app = getApp()
-
+// pages/author/author.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      reading:'正在阅读',
-      readed:'未读',
-      more:'查看全部',
-      list:[],
-      unread:[],
-
+    list:[],
+    length:4,
+    pay:'＋关注',
+    flag:false,
+    num:null
   },
-  detail(e){
+  change(e){
+    var _this = this;
+    
     console.log(e)
-    app.globalData.content = e.currentTarget.dataset.num;
-    console.log(app.globalData.content)
+    this.setData({
+      flag:true,
+      pay:'已关注',
+      num:e.currentTarget.dataset.num
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.request({
-      url: 'https://wujunhui.xyz/getbooks',
-      success: (res) => {
-        this.setData({
-          list: res.data.splice(0,3),
-          unread:res.data.splice(5,6)
-        })
-      }
-    })
-
+      wx.request({
+        url: 'https://wujunhui.xyz/getwriters',
+        success:(res) =>{
+          this.setData({
+            list:res.data
+          })
+        }
+      })
   },
 
   /**

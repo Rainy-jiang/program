@@ -73,6 +73,7 @@
   font-size: 20rpx;
   margin-top: 30rpx;
   text-align: center;
+  padding-bottom: 50rpx;
 }
 .recommend{
   width: 238rpx;

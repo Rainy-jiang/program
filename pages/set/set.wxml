@@ -1,0 +1,31 @@
+<!--pages/set/set.wxml-->
+<view class="container">
+  <navigator class="infor-list">
+    <view>查看账户</view>
+    <mp-icon icon="arrow" color="#dcdeea" size="{{14}}"></mp-icon>
+  </navigator>
+  <navigator class="infor-list">
+    <view>个人资料</view>
+    <mp-icon icon="arrow" color="#dcdeea" size="{{14}}"></mp-icon>
+  </navigator>
+  <view class="infor-list">
+    <view>消息提醒</view>
+     <switch color="#fb6894" checked="{{switch1Checked}}" bindchange="switch1Change"/>
+  </view>
+  <navigator class="infor-list">
+    <view>清理缓存</view>
+    <view>
+    <text class="datas">128MB</text>
+    <mp-icon icon="arrow" color="#dcdeea" size="{{14}}"></mp-icon>
+    </view>
+  </navigator>
+  <navigator class="infor-list">
+    <view>帮助中心</view>
+    <mp-icon icon="arrow" color="#dcdeea" size="{{14}}"></mp-icon>
+  </navigator>
+  <navigator class="infor-list">
+    <view>关于我们</view>
+    <mp-icon icon="arrow" color="#dcdeea" size="{{14}}"></mp-icon>
+  </navigator>
+  <navigator class="setout">退出登录</navigator>
+</view>

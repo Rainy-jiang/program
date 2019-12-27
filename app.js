@@ -47,6 +47,9 @@ App({
     nickName:'',
     country:'',
     province:'',
-    city:''
+    city:'',
+    content:null,
+    author:null
   }
+  
 })

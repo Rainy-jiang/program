@@ -20,19 +20,6 @@ Page({
     }, {
       num: 6673,
       title: '喜欢'
-    }],
-    arry: [{
-      title: '个人信息',
-      icon: '>'
-    }, {
-      title: '我的消息',
-      icon: '>'
-    }, {
-      title: '账户余额',
-      icon: '>'
-    }, {
-      title: '我的评论',
-      icon: '>'
     }]
   },
 

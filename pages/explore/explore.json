@@ -1,6 +1,4 @@
 {
     "navigationBarTitleText": "探索",
-    "usingComponents": {
-      "works":"../../components/works/works"
-    }
+    "usingComponents": {}
 }

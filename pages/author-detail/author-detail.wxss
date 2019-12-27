@@ -1,0 +1,144 @@
+/* pages/author-detail/author-detail.wxss */
+.portrait{
+  position: relative;
+  height: 240rpx;
+  width: 100%;
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.pick{
+  width: 240rpx;
+  height: 240rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+.nickname{
+  color: #fff;
+  font-size: 50rpx;
+  margin-top: 30rpx;
+}
+.message{
+  display: flex;
+  justify-content: space-between;
+  height: 106rpx;
+}
+.megitem{
+  display: flex;
+  flex-direction: column;
+}
+.address{
+  color: #b5b7c5;
+  font-size: 14px;
+  margin-top: 10rpx;
+}
+.share-item{
+  position: absolute;
+  right: 0rpx;
+  bottom: 0rpx;
+  display: flex;
+  justify-content: flex-end;
+}
+.share{
+  width: 180rpx;
+  height: 64rpx;
+  border: 1px solid #545d66;
+  border-radius: 10rpx;
+  color: #9497ab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flollow{
+  width: 180rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  text-align: center;
+  background: #478ce0;
+  color: #fff;
+  border-radius: 10rpx;
+  margin-left: 20rpx;
+}
+.icon-fenxiang{
+  padding-right: 10rpx;
+}
+.information{
+  width: 100%;
+  height: 126rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #2b323b;
+  border-radius: 10rpx;
+  margin-top: 50rpx;
+}
+.infor{
+  border-right: 1px solid #363c45;
+  width: 227rpx;
+  text-align: center;
+  color: #fff;
+}
+.infor:last-child{
+  border: none;
+}
+.num-title{
+  color: #75808d;
+  font-size: 14px;
+}
+.works{
+  width: 100%;
+  height: 170rpx;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  color: #fff;
+}
+.book{
+  color: #478ce0;
+  font-size: 24rpx;
+}
+
+.jobs-wrapper{
+  width: 100%;
+  height: 450rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  border-bottom: 1px solid #343946;
+}
+.picks{
+  width: 216rpx;
+  height: 320rpx;
+  padding-right: 30rpx;
+}
+.book-message{
+  width: 430rpx;
+}
+.bookname{
+  color: #fff;
+  font-size: 36rpx;
+}
+.about{
+  color: #6d7783;
+  font-size: 24rpx;
+  margin-bottom: 30rpx;
+  margin-top: 20rpx;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp:2; 
+  -webkit-box-orient: vertical;
+}
+.icon-xingxing{
+  color: #fb6894;
+  padding:0rpx 5rpx;
+}
+.pingfen{
+  color: #ffce44;
+  padding:10rpx;
+}
+.number{
+  color: #478ce0;
+  font-size: 20epx;
+}

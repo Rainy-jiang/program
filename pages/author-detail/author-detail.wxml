@@ -1,0 +1,48 @@
+<!--pages/author-detail/author-detail.wxml-->
+<view class="container">
+  <view class="portrait">
+    <view class="message">
+      <image src="{{ author.touxiang }}" class="pick"></image>
+      <view class="megitem">
+        <view class="nickname">{{ author.name }}</view>
+        <view class="address">
+          <text>{{ author.country }} · </text>
+          <text>{{ author.city }}</text>
+        </view>
+      </view>
+    </view>
+    <view class="share-item">
+      <view class="share">
+        <icon class="iconfont icon-fenxiang"></icon>
+        <view>分享</view>
+      </view>
+      <view class="flollow">＋关注</view>
+    </view>
+  </view>
+  <view class="information">
+    <view wx:for="{{ list }}" wx:key="index" class="infor">
+      <view class="num">{{ item.num }}</view>
+      <text class="num-title">{{ item.title }}</text>
+    </view>
+  </view>
+  <view class="works">
+    <view>代表作</view>
+    <view class="book">总共 3 本书</view>
+  </view>
+  <view class="jobs-wrapper" wx:for="{{ content }}" wx:key="index">
+    <image class="picks" src="{{ item.touxiang }}"></image>
+    <view class="book-message">
+      <view class="bookname">{{ item.bookname }}</view>
+       <view class="star">
+        <icon class="iconfont icon-xingxing"></icon>
+        <icon class="iconfont icon-xingxing"></icon>
+        <icon class="iconfont icon-xingxing"></icon>
+        <icon class="iconfont icon-xingxing"></icon>
+        <icon class="iconfont icon-xingxing"></icon>
+        <text class="pingfen">5.0</text>
+      </view>
+      <view class="about">{{ item.about }}</view>
+      <view class="number">256 人阅读</view>
+    </view>
+  </view>
+</view>

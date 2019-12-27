@@ -1,50 +1,38 @@
-// pages/explore/explore.js
-const app = getApp()
+// pages/author-detail/author-detail.js
 
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    flag:true,
-    list:[],
-    showinfo:null,
-    pick:[],
-  },
-  handle(e){
-    console.log(e)
-    app.globalData.content = e.currentTarget.dataset.num;
-  },
-  change(){
-    this.setData({
-      flag:true
-    })
-  },
-  changes(){
-    this.setData({
-      flag:false
-    })
+    author: null,
+    list: [{
+      num: 1286,
+      title: '关注'
+    }, {
+      num: 3368,
+      title: '粉丝'
+    }, {
+      num: 6673,
+      title: '喜欢'
+    }],
+    content:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    flag:true
-    wx.request({
-      url: 'https://wujunhui.xyz/getbooks',
-      success: (res) => {
-        this.setData({
-          list: res.data
-        })
-      }
+    this.setData({
+      author: app.globalData.author
     })
     wx.request({
-      url: 'https://wujunhui.xyz/getwriters',
-      success: (res) => {
+      url: 'https://wujunhui.xyz/getbooks',
+      success:(res) => {
         this.setData({
-          pick: res.data.splice(3,4)
+          content:res.data.splice(9,3)
         })
       }
     })

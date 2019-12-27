@@ -5,27 +5,29 @@
     <view class="menu-top {{ flag ? 'active' : '' }}" bindtap="change">
       <icon class="iconfont icon-caidan"></icon>
     </view>
-    <view class="{{ flag ? '' : 'active' }}">
+    <view class="{{ flag ? '' : 'active' }}" bindtap="changes">
       <icon class="iconfont icon-fangkuai"></icon>
     </view>
   </view>
   <view class="content" hidden="{{ !flag }}">
-    <view class="content-list" bindtap="handle" data-info="{{ item }}" wx:for="{{ list }}" wx:key="index">
+    <navigator url="/pages/detail/detail" class="content-list" data-num="{{ item }}" bindtap="handle" wx:for="{{ list }}" wx:key="index">
       <image class="content-pick" src="{{ item.touxiang }}"></image>
       <view class="content-title">{{ item.bookname }}</view>
-    </view>
+    </navigator>
   </view>
 
   <view hidden="{{ flag }}">
-    <view class="explore-item">
-      <image class="pick" src="{{ showinfo.touxiang }}"></image>
-      <view class="title">{{ showinfo.bookname }}</view>
-      <view class="author">{{ showinfo.writername }}</view>
+    <view wx:for="{{ list }}" wx:key="index" bindtap="handle" data-num="{{ item }}">
+      <navigator class="explore-item" url="/pages/detail/detail">
+        <image class="pick" src="{{ item.touxiang }}"></image>
+        <view class="title">{{ item.bookname }}</view>
+        <view class="author">{{ item.writername }}</view>
+      </navigator>
+      <view class="user-message">
+        <image class="user-pick" wx:for="{{ pick }}" wx:key="index" src="{{ item.touxiang }}"></image>
+      </view>
+      <view class="people">457 人已阅读</view>
     </view>
-    <view class="user-message">
-      <image class="user-pick" wx:for="{{ pick }}" wx:key="index" src="{{ item.touxiang }}"></image>
-    </view>
-    <view class="people">457 人已阅读</view>
     <navigator class="recommend">
       <image class="recommend-pick" src="https://wujunhui.xyz/zz-meks.png"></image>
       <view class="nickname">

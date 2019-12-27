@@ -1,38 +1,48 @@
-// pages/books/books.js
-const app = getApp()
-
+// pages/recharge/recharge.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      reading:'正在阅读',
-      readed:'未读',
-      more:'查看全部',
-      list:[],
-      unread:[],
-
+    flag:true,
+    isvalue:''
   },
-  detail(e){
-    console.log(e)
-    app.globalData.content = e.currentTarget.dataset.num;
-    console.log(app.globalData.content)
+  content(e){
+    var reg = /^[0-9]{1,5}$/;
+    var cost = e.detail.value;
+    if(cost == ''){
+      wx.showToast({
+        title: '请输入充值金额',
+        icon:'none'
+      })
+    }else if (!reg.test(cost)){
+      wx.showToast({
+        title: '输入内容为数字，不能为负数，长度为1-5位',
+        icon: 'none',
+      })
+    }else{
+      this.setData({
+        isvalue: e.detail.value
+      })
+    }
+   
+  },
+  handle(){
+    this.setData({
+      flag:false
+    })
+  },
+  handles(){
+    this.setData({
+      flag: true
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.request({
-      url: 'https://wujunhui.xyz/getbooks',
-      success: (res) => {
-        this.setData({
-          list: res.data.splice(0,3),
-          unread:res.data.splice(5,6)
-        })
-      }
-    })
 
   },
 

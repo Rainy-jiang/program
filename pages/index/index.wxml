@@ -2,7 +2,7 @@
 <view class="container">
   <view class="top">
     <icon class="iconfont icon-jiangbei"></icon>
-    <icon class="iconfont icon-liebiao"></icon>
+    <navigator url="/pages/sort/sort"><icon class="iconfont icon-liebiao"></icon></navigator>
   </view>
   <view class="search">
     <icon class="iconfont icon-sousuo"></icon>
@@ -12,7 +12,7 @@
   </view>
   <view class="ranking">
     <text>{{ ranking }}</text>
-    <navigator class="viewall">{{ seeall }} ></navigator>
+    <navigator class="viewall" url="/pages/sort/sort">{{ seeall }} ></navigator>
   </view>
   <view class="sort">
     <swiper display-multiple-items="{{ length }}" class="sort-swp">
@@ -28,13 +28,13 @@
   </view>
   <view class="ranking">
     <text>{{ authorrank }}</text>
-    <navigator class="viewall">{{ seeall }} ></navigator>
+    <navigator url="/pages/author/author" class="viewall">{{ seeall }} ></navigator>
   </view>
   <view class="sort">
     <swiper display-multiple-items="{{ length }}" class="sort-swp">
       <block wx:for="{{ author }}" wx:key="index">
         <swiper-item class="swiperStyle">
-          <navigator url="">
+          <navigator url="/pages/author-detail/author-detail" bindtap="handle" data-num="{{ item }}">
             <image class="sort-pick" src="{{ item.touxiang }}"></image>
             <text>{{ item.name }}</text>
           </navigator>
@@ -47,8 +47,8 @@
     <navigator class="viewall">{{ seeall }} ></navigator>
   </view>
   <view class="release">
-    <view class="release-item" wx:for="{{ book }}" wx:key="*this">
-      <navigator url="">
+    <view class="release-item" wx:for="{{ book }}" wx:key="index" data-num="{{ item }}" bindtap="detail">
+      <navigator url="/pages/detail/detail">
         <image class="release-pick" src="{{ item.touxiang }}"></image>
       </navigator>
       <view>{{ item.bookname }}</view>
@@ -67,9 +67,9 @@
   </view>
   <view class="hot-foot">
     <swiper display-multiple-items="{{ nums }}">
-      <block wx:for="{{ volume }}" wx:key="index">
+      <block wx:for="{{ volume }}" wx:key="index" >
         <swiper-item>
-          <view class="hot-item">
+          <navigator url="/pages/detail/detail" class="hot-item" data-num="{{ item }}" bindtap="detail">
             <image class="hot-pick" src="{{ item.touxiang }}"></image>
             <view class="santi">
               <view class="santi-title">{{ item.bookname }}</view>
@@ -77,7 +77,7 @@
             </view>
             <view class="content">{{ item.about }}</view>
             <navigator class="list">...</navigator>
-          </view>
+          </navigator>
         </swiper-item>
       </block>
     </swiper>

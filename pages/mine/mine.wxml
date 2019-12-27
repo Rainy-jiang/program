@@ -1,6 +1,6 @@
 <!--pages/mine/mine.wxml-->
 <view class="container">
-  <navigator class="setup">
+  <navigator class="setup" url="/pages/set/set">
     <icon class="iconfont icon-shezhi"></icon>
   </navigator>
   <view class="portrait">
@@ -20,7 +20,7 @@
     </view>
   </view>
   <view class="information">
-    <view wx:for="{{ list }}" wx:key="*this" class="infor">
+    <view wx:for="{{ list }}" wx:key="index" class="infor">
       <view class="num">{{ item.num }}</view>
       <text class="num-title">{{ item.title }}</text>
     </view>
@@ -33,7 +33,7 @@
       <view>我的消息</view>
       <text class="number">6</text>
   </navigator>
-  <navigator class="infor-list">
+  <navigator class="infor-list" url="/pages/balance/balance">
       <view>账户余额</view>
       <view>
         <text class="money">1375.00</text>
@@ -42,6 +42,10 @@
   </navigator>
   <navigator class="infor-list">
       <view>我的评论</view>
+      <mp-icon icon="arrow" color="#dcdeea" size="{{14}}"></mp-icon>
+  </navigator>
+  <navigator class="infor-list" url="/pages/shopping/shopping">
+      <view>购物车</view>
       <mp-icon icon="arrow" color="#dcdeea" size="{{14}}"></mp-icon>
   </navigator>
 </view>

@@ -1,0 +1,40 @@
+<!--pages/sort/sort.wxml-->
+<view class="container">
+  <view class="search">
+    <icon class="iconfont icon-sousuo"></icon>
+    <input class="searcheng" placeholder="搜索..." placeholder-style="color:#9da3b4;font-size:14px"></input>
+  </view>
+  <view class="sort">
+    <swiper display-multiple-items="{{ length }}">
+      <block wx:for="{{ list }}" wx:key="index">
+        <swiper-item>
+          <view class="sort-list">
+            <view class="sort-content {{ num == index ? 'active' : '' }}" data-num="{{ index }}" bindtap="change">{{ item.type }}</view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="shelves">
+    <view>新上架</view>
+    <navigator class="seeall">查看全部 ></navigator>
+  </view>
+  <view class="shelves-list">
+    <navigator wx:for="{{ newbook }}" wx:key="index">
+      <image class="pick" src="{{ item.touxiang }}" ></image>
+      <view>{{ item.bookname }}</view>
+      <view class="nickname">{{ item.writername }}</view>
+    </navigator>
+  </view>
+  <view class="shelves">
+    <view>热门</view>
+    <navigator class="seeall">查看全部 ></navigator>
+  </view>
+  <view class="shelves-list">
+    <navigator wx:for="{{ newbook }}" wx:key="index">
+      <image class="pick" src="{{ item.touxiang }}" ></image>
+      <view>{{ item.bookname }}</view>
+      <view class="nickname">{{ item.writername }}</view>
+    </navigator>
+  </view>
+</view>

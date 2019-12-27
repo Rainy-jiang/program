@@ -1,38 +1,17 @@
-// pages/books/books.js
-const app = getApp()
-
+// pages/balance/balance.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      reading:'正在阅读',
-      readed:'未读',
-      more:'查看全部',
-      list:[],
-      unread:[],
 
-  },
-  detail(e){
-    console.log(e)
-    app.globalData.content = e.currentTarget.dataset.num;
-    console.log(app.globalData.content)
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.request({
-      url: 'https://wujunhui.xyz/getbooks',
-      success: (res) => {
-        this.setData({
-          list: res.data.splice(0,3),
-          unread:res.data.splice(5,6)
-        })
-      }
-    })
 
   },
 

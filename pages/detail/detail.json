@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "详情",
+  "usingComponents": {
+    "mp-icon": "../../weui-miniprojram/icon/icon"
+  }
+}

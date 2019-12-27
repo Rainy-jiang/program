@@ -1,0 +1,96 @@
+<!--pages/detail/detail.wxml-->
+<view class="container">
+  <view class="jobs-wrapper">
+    <image class="pick" src="{{ content.touxiang }}"></image>
+    <view class="book-message">
+      <view class="bookname">{{ content.bookname }}</view>
+      <view class="writername">{{ content.writername }}</view>
+      <view class="about">{{ content.about }}</view>
+      <view class="star">
+        <icon class="iconfont icon-xingxing"></icon>
+        <icon class="iconfont icon-xingxing"></icon>
+        <icon class="iconfont icon-xingxing"></icon>
+        <icon class="iconfont icon-xingxing"></icon>
+        <icon class="iconfont icon-xingxing"></icon>
+        <text class="pingfen">5.0</text>
+      </view>
+    </view>
+  </view>
+  <view class="collect">
+    <view class="collect-color">
+      <icon class="iconfont icon-xin {{ flag ? '' : 'active' }}" bindtap="change"></icon>
+      <text>收藏</text>
+    </view>
+    <view class="collect-color" bindtap="shares">
+      <icon class="iconfont icon-fenxiang"></icon>
+      <text>分享</text>
+    </view>
+    <view class="collect-color" bindtap="handle">
+      <icon class="iconfont icon-shujia"></icon>
+      <text>放入书架</text>
+    </view>
+  </view>
+  <view class="detail-content">
+    <view class="detail-title">详情</view>
+    <text class="detail-about">{{ content.about }}</text>
+  </view>
+  <navigator class="catalog">
+    <text>查看目录</text>
+    <mp-icon icon="arrow" color="#dcdeea" size="{{14}}"></mp-icon>
+  </navigator>
+  <view class="comment">
+    <view>
+      <text>评论</text>
+      <navigator class="comment-num" url="/pages/comment/comment">215 条评论</navigator>
+    </view>
+    <icon class="iconfont icon-pinglun1"></icon>
+  </view>
+  <view class="comment-message">
+    <view class="comment-user">
+      <image class="user-pick" src="https://wujunhui.xyz/zz-zxj.png"></image>
+      <text class="nickname">你个废物</text>
+    </view>
+    <view class="comment-content">
+      <text>{{ content.about }}</text>
+      <view class="comment-item">
+        <view class="time">12-25 21:20</view>
+        <view class="number">
+          <view>
+            <icon class="iconfont icon-xin comicon"></icon>
+            <text>134</text>
+          </view>
+          <view>
+            <icon class="iconfont icon-pinglun comicon"></icon>
+            <text>89</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="foot">
+    <view class="trysee">试看</view>
+    <view class="purchase">购买</view>
+  </view>
+</view>
+<view class="addto" hidden="{{ show }}">
+  <view class="addto-item">
+    <image class="add-book" src="{{ content.touxiang }}"></image>
+    <view class="add-books">已经将这本书加入到个人书架</view>
+    <view class="ok" bindtap="handles">好的</view>
+  </view>
+</view>
+<view class="share" hidden="{{ share }}">
+  <view class="share-item">
+    <image class="share-pick" src="../../image/pengyouquan.png"></image>
+  </view>
+  <view class="share-item">
+    <image class="share-pick" src="../../image/kongjian.png"></image>
+  </view>
+  <view class="share-item">
+    <image class="share-pick" src="../../image/weibo.png"></image>
+  </view>
+  <view class="share-item">
+    <image class="share-pick" src="../../image/QQ.png"></image>
+  </view>
+  <image class="share-x" src="../../image/x.png" bindtap="sharex"></image>
+</view>

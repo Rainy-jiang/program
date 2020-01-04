@@ -1,4 +1,5 @@
 // pages/sort/sort.js
+const app = getApp()
 Page({
 
   /**
@@ -15,6 +16,9 @@ Page({
     this.setData({
       num: e.currentTarget.dataset.num
     })
+  },
+  detail(e) {
+    app.globalData.content = e.currentTarget.dataset.num;
   },
 
   /**

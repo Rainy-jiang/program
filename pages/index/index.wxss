@@ -1,12 +1,5 @@
 /**index.wxss**/
 
-.top {
-  width: 680rpx;
-  display: flex;
-  justify-content: space-between;
-  color: #fff;
-}
-
 .search {
   color: #9da3b4;
   width: 650rpx;

@@ -1,4 +1,5 @@
 // pages/science/science.js
+const app = getApp()
 Page({
 
   /**
@@ -20,6 +21,9 @@ Page({
         })
       }
     })
+  },
+  detail(e) {
+    app.globalData.content = e.currentTarget.dataset.num;
   },
 
   /**

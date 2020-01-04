@@ -1,9 +1,6 @@
 <!--pages/science/science.wxml-->
-<view class="container">
-  <navigator class="icon">
-    <icon class="iconfont icon-liebiao"></icon>
-  </navigator>
-  <view class="hot-item" wx:for="{{ volume }}" wx:key="index">
+<view class="container wrapper">
+  <navigator url="/pages/detail/detail" class="hot-item" wx:for="{{ volume }}" wx:key="index" data-num="{{ item }}" bindtap="detail">
     <image class="hot-pick" src="{{ item.touxiang }}"></image>
     <view class="santi">
       <view class="santi-title">{{ item.bookname }}</view>
@@ -11,5 +8,5 @@
     </view>
     <view class="content">{{ item.about }}</view>
     <navigator class="list">...</navigator>
-  </view>
+  </navigator>
 </view>

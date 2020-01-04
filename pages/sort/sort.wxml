@@ -20,7 +20,7 @@
     <navigator class="seeall">查看全部 ></navigator>
   </view>
   <view class="shelves-list">
-    <navigator wx:for="{{ newbook }}" wx:key="index">
+    <navigator url="/pages/detail/detail" wx:for="{{ newbook }}" wx:key="index" data-num="{{ item }}" bindtap="detail">
       <image class="pick" src="{{ item.touxiang }}" ></image>
       <view>{{ item.bookname }}</view>
       <view class="nickname">{{ item.writername }}</view>
@@ -31,7 +31,7 @@
     <navigator class="seeall">查看全部 ></navigator>
   </view>
   <view class="shelves-list">
-    <navigator wx:for="{{ newbook }}" wx:key="index">
+    <navigator url="/pages/detail/detail" wx:for="{{ newbook }}" wx:key="index" data-num="{{ item }}" bindtap="detail">
       <image class="pick" src="{{ item.touxiang }}" ></image>
       <view>{{ item.bookname }}</view>
       <view class="nickname">{{ item.writername }}</view>

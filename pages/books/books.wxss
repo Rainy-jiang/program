@@ -1,12 +1,4 @@
 /* pages/books/books.wxss */
-.icon{
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  color: #fff;
-  padding-right: 10rpx;
-  padding-bottom: 40rpx;
-}
 .reading{
   width: 100%;
   color: #fff;

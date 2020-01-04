@@ -1,4 +1,5 @@
 // pages/search/search.js
+const app = getApp()
 Page({
 
   /**
@@ -9,7 +10,16 @@ Page({
       more: '查看全部',
       history:'搜索历史',
       list:[],
-      popular:[]
+      popular:[],
+      flag:true
+  },
+  detail(e) {
+    app.globalData.content = e.currentTarget.dataset.num;
+  },
+  change(){
+    this.setData({
+      flag:false
+    })
   },
 
   /**

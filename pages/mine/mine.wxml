@@ -1,8 +1,5 @@
 <!--pages/mine/mine.wxml-->
 <view class="container">
-  <navigator class="setup" url="/pages/set/set">
-    <icon class="iconfont icon-shezhi"></icon>
-  </navigator>
   <view class="portrait">
     <view class="message">
       <image src="{{ pickurl}}" class="pick"></image>
@@ -14,10 +11,7 @@
         </view>
       </view>
     </view>
-    <view class="share">
-      <icon class="iconfont icon-fenxiang"></icon>
-      <view>分享</view>
-    </view>
+    <button id="share" open-type="share"><icon class="iconfont icon-fenxiang"></icon>分享</button>
   </view>
   <view class="information">
     <view wx:for="{{ list }}" wx:key="index" class="infor">
@@ -40,12 +34,16 @@
         <mp-icon icon="arrow" color="#dcdeea" size="{{14}}"></mp-icon>
       </view>
   </navigator>
-  <navigator class="infor-list">
+  <navigator url="/pages/comment/comment" class="infor-list">
       <view>我的评论</view>
       <mp-icon icon="arrow" color="#dcdeea" size="{{14}}"></mp-icon>
   </navigator>
   <navigator class="infor-list" url="/pages/shopping/shopping">
       <view>购物车</view>
+      <mp-icon icon="arrow" color="#dcdeea" size="{{14}}"></mp-icon>
+  </navigator>
+    <navigator class="infor-list" url="/pages/set/set">
+      <view>设置</view>
       <mp-icon icon="arrow" color="#dcdeea" size="{{14}}"></mp-icon>
   </navigator>
 </view>

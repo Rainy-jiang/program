@@ -1,11 +1,6 @@
 /* pages/science/science.wxss */
-.icon{
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  color: #fff;
-  padding-right: 10rpx;
-  padding-bottom: 40rpx;
+.wrapper{
+  padding-top: 45rpx;
 }
 .hot-item{
   position: relative;

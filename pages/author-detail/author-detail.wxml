@@ -12,11 +12,8 @@
       </view>
     </view>
     <view class="share-item">
-      <view class="share">
-        <icon class="iconfont icon-fenxiang"></icon>
-        <view>分享</view>
-      </view>
-      <view class="flollow">＋关注</view>
+        <button id="share" open-type="share"><icon class="iconfont icon-fenxiang"></icon>分享</button>
+      <view class="flollow {{ pay === '已关注' ? 'active' : '' }}" bindtap="change">{{ pay }}</view>
     </view>
   </view>
   <view class="information">
@@ -29,7 +26,7 @@
     <view>代表作</view>
     <view class="book">总共 3 本书</view>
   </view>
-  <view class="jobs-wrapper" wx:for="{{ content }}" wx:key="index">
+  <navigator url="/pages/detail/detail" class="jobs-wrapper" wx:for="{{ content }}" wx:key="index" data-num="{{ item }}" bindtap="detail">
     <image class="picks" src="{{ item.touxiang }}"></image>
     <view class="book-message">
       <view class="bookname">{{ item.bookname }}</view>
@@ -44,5 +41,5 @@
       <view class="about">{{ item.about }}</view>
       <view class="number">256 人阅读</view>
     </view>
-  </view>
+  </navigator>
 </view>

@@ -24,7 +24,6 @@ Page({
     app.globalData.content = e.currentTarget.dataset.num;
   },
   handle(e){
-    console.log(e)
     app.globalData.author = e.currentTarget.dataset.num;
   },
 

@@ -12,9 +12,15 @@ Page({
     share:true
   },
   change(){
-    this.setData({
-      flag:false
-    })
+    if(!this.data.flag){
+      this.setData({
+        flag: true
+      })
+    }else{
+      this.setData({
+        flag: false
+      })
+    }
   },
   handle(){
     this.setData({

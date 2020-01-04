@@ -1,8 +1,5 @@
 <!--pages/author/author.wxml-->
-<view class="container">
-  <navigator class="icon">
-    <icon class="iconfont icon-liebiao"></icon>
-  </navigator>
+<view class="container wrapper">
   <view class="ranking">
     <view class="rank-left author">
       <view class="second">
@@ -41,8 +38,10 @@
       <swiper display-multiple-items="{{ length }}" class="swiper">
         <block wx:for="{{ list }}" wx:key="index">
           <swiper-item class="author-list">
-            <image class="author-pick" src="{{ item.touxiang }}"></image>
-            <view>{{ item.name }}</view>
+            <navigator url="/pages/author-detail/author-detail" bindtap="handle" data-num="{{ item }}">
+              <image class="author-pick" src="{{ item.touxiang }}"></image>
+              <view>{{ item.name }}</view>
+            </navigator>
             <view class="pay {{ num == index ? 'active' : '' }}" bindtap="change" data-num="{{ index }}">{{ pay }}</view>
           </swiper-item>
         </block>
@@ -50,7 +49,7 @@
     </view>
   </view>
 
-   <view class="hot-author">
+  <view class="hot-author">
     <view class="hot-title">
       <view>新晋作者</view>
       <navigator class="seeall">查看全部 ></navigator>
@@ -59,8 +58,10 @@
       <swiper display-multiple-items="{{ length }}" class="swiper">
         <block wx:for="{{ list }}" wx:key="index">
           <swiper-item class="author-list">
-            <image class="author-pick" src="{{ item.touxiang }}"></image>
-            <view>{{ item.name }}</view>
+            <navigator url="/pages/author-detail/author-detail" bindtap="handle" data-num="{{ item }}">
+              <image class="author-pick" src="{{ item.touxiang }}"></image>
+              <view>{{ item.name }}</view>
+            </navigator>
             <view class="pay {{ num == index ? 'active' : '' }}" bindtap="change" data-num="{{ index }}">{{ pay }}</view>
           </swiper-item>
         </block>
@@ -68,7 +69,7 @@
     </view>
   </view>
 
-   <view class="hot-author">
+  <view class="hot-author">
     <view class="hot-title">
       <view>其他作者</view>
       <navigator class="seeall">查看全部 ></navigator>
@@ -77,8 +78,10 @@
       <swiper display-multiple-items="{{ length }}" class="swiper">
         <block wx:for="{{ list }}" wx:key="index">
           <swiper-item class="author-list">
-            <image class="author-pick" src="{{ item.touxiang }}"></image>
-            <view>{{ item.name }}</view>
+            <navigator url="/pages/author-detail/author-detail" bindtap="handle" data-num="{{ item }}">
+              <image class="author-pick" src="{{ item.touxiang }}"></image>
+              <view>{{ item.name }}</view>
+            </navigator>
             <view class="pay {{ num == index ? 'active' : '' }}" bindtap="change" data-num="{{ index }}">{{ pay }}</view>
           </swiper-item>
         </block>

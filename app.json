@@ -1,6 +1,6 @@
 {
   "pages": [
-    
+    "pages/sign/sign",
     "pages/index/index",
     "pages/recharge/recharge",
     "pages/balance/balance",
@@ -12,7 +12,6 @@
     "pages/comment/comment",
     "pages/detail/detail",
     "pages/search/search",
-    "pages/sign/sign",
     "pages/science/science",
     "pages/books/books",
     "pages/explore/explore",

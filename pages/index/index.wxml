@@ -1,9 +1,5 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="top">
-    <icon class="iconfont icon-jiangbei"></icon>
-    <navigator url="/pages/sort/sort"><icon class="iconfont icon-liebiao"></icon></navigator>
-  </view>
   <view class="search">
     <icon class="iconfont icon-sousuo"></icon>
     <navigator url="/pages/search/search">
@@ -44,7 +40,7 @@
   </view>
   <view class="ranking new">
     <text>{{ newrealease }}</text>
-    <navigator class="viewall">{{ seeall }} ></navigator>
+    <navigator class="viewall" url="/pages/explore/explore" open-type="switchTab">{{ seeall }} ></navigator>
   </view>
   <view class="release">
     <view class="release-item" wx:for="{{ book }}" wx:key="index" data-num="{{ item }}" bindtap="detail">

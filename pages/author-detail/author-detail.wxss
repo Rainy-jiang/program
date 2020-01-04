@@ -39,15 +39,18 @@
   display: flex;
   justify-content: flex-end;
 }
-.share{
+#share{
   width: 180rpx;
-  height: 64rpx;
+  min-height: 64rpx;
   border: 1px solid #545d66;
   border-radius: 10rpx;
   color: #9497ab;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0px;
+  font-size: 24rpx;
+  background: none;
 }
 .flollow{
   width: 180rpx;
@@ -58,6 +61,11 @@
   color: #fff;
   border-radius: 10rpx;
   margin-left: 20rpx;
+  box-sizing: border-box;
+}
+.active{
+  background: none;
+  border: 1px solid #545d66;
 }
 .icon-fenxiang{
   padding-right: 10rpx;

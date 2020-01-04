@@ -1,8 +1,5 @@
 <!--pages/books/books.wxml-->
-<view class="container">
-  <navigator class="icon" url="/pages/sort/sort">
-    <icon class="iconfont icon-liebiao"></icon>
-  </navigator>
+<view class="container">>
   <view class="reading">
     <text>{{ reading }}</text>
     <navigator class="more">{{ more }} ></navigator>
@@ -16,7 +13,7 @@
   </view>
    <view class="reading">
     <text>{{ readed }}</text>
-    <navigator class="more">{{ more }} ></navigator>
+    <navigator url="/pages/explore/explore" open-type="switchTab" class="more">{{ more }} ></navigator>
   </view>
   <view class="reading-content unread">
     <navigator url="/pages/detail/detail" class="reading-list" wx:for="{{ unread }}" wx:key="index" bindtap="detail" data-num="{{ item }}">

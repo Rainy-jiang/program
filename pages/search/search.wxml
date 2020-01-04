@@ -7,26 +7,26 @@
         <input placeholder="搜索..." placeholder-style="color:#9da3b4;font-size:14px"></input>
       </navigator>
     </view>
-    <navigator class="cancel">取消</navigator>
+    <navigator class="cancel" url="/pages/index/index" open-type="switchTab">取消</navigator>
   </view>
   <view class="reading">
     <text>{{ hotSearch }}</text>
-    <navigator class="more">{{ more }} ></navigator>
+    <navigator url="/pages/explore/explore" open-type="switchTab" class="more">{{ more }}></navigator>
   </view>
   <view class="reading-content">
-    <view class="reading-list" wx:for="{{ list }}" wx:key="index">
+    <navigator url="/pages/detail/detail" class="reading-list" wx:for="{{ list }}" wx:key="index" data-num="{{ item }}" bindtap="detail">
       <image class="pick" src="{{ item.touxiang }}"></image>
       <view class="book-title">{{ item.bookname }}</view>
       <view class="book-author">{{ item.writername }}</view>
-    </view>
+    </navigator>
   </view>
   <view class="reading">
     <text>{{ history }}</text>
-    <navigator class="more"> 
+    <view class="more" bindtap="change"> 
       <icon class="iconfont icon-shanchu"></icon>
-    </navigator>
+    </view>
   </view>
-  <view class="history">
+  <view class="history" hidden="{{ !flag }}">
     <navigator class="history-list" wx:for="{{ popular }}" wx:key="index">{{ item.title }}</navigator>
   </view>
 </view>

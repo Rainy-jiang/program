@@ -1,4 +1,5 @@
 // pages/author/author.js
+const app = getApp()
 Page({
 
   /**
@@ -8,18 +9,27 @@ Page({
     list:[],
     length:4,
     pay:'＋关注',
-    flag:false,
     num:null
   },
   change(e){
-    var _this = this;
-    
-    console.log(e)
+    var follow = e.currentTarget.dataset.num
     this.setData({
-      flag:true,
-      pay:'已关注',
-      num:e.currentTarget.dataset.num
+      num:follow
     })
+    if(this.data.pay != '＋关注' && this.data.num === follow){
+      this.setData({
+        pay:'＋关注',
+        num: follow
+      })
+    }else {
+      this.setData({
+        pay:'已关注',
+        num: follow
+      })
+    }
+  },
+  handle(e) {
+    app.globalData.author = e.currentTarget.dataset.num;
   },
 
   /**

@@ -8,6 +8,7 @@ Page({
    */
   data: {
     author: null,
+    pay:'＋关注',
     list: [{
       num: 1286,
       title: '关注'
@@ -19,6 +20,28 @@ Page({
       title: '喜欢'
     }],
     content:[]
+  },
+  detail(e) {
+    app.globalData.content = e.currentTarget.dataset.num;
+  },
+  change(){
+    if(this.data.pay != '＋关注'){
+      this.setData({
+        pay:'＋关注'
+      })
+    }else{
+      this.setData({
+        pay:'已关注'
+      })
+    }
+  },
+  handle(){
+    wx.updateShareMenu({
+      withShareTicket: true,
+      success() { 
+        console.log('success')
+      }
+    })
   },
 
   /**
